@@ -12,6 +12,6 @@ int main()
     cin >> b;
 
     cout << boolalpha;
-    ((a % 2 != 0) != (b % 2 != 0)) ? cout << true : cout << false;
+    cout << ((a % 2 != 0) != (b % 2 != 0));
     return 0;
 }
