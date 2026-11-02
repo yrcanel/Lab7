@@ -1,6 +1,27 @@
 #include <iostream>
 
-int main(){
-	std::cout << "This is a very cool feature\n";
-	return 0;
+int main() {
+    int height;
+    std::cout << "Введите высоту треугольника: ";
+    std::cin >> height;
+
+    // Внешний цикл управляет строками (от 1 до height)
+    for (int i = 1; i <= height; ++i) {
+        
+        // 1. Цикл для вывода пробелов (выравнивание по центру)
+        for (int j = 1; j <= height - i; ++j) {
+            std::cout << " ";
+        }
+        
+        // 2. Цикл для вывода звёздочек
+        // Количество звёздочек в строке всегда равно (2 * i - 1)
+        for (int k = 1; k <= (2 * i - 1); ++k) {
+            std::cout << "*";
+        }
+        
+        // Переход на новую строку после завершения текущего ряда
+        std::cout << std::endl;
+    }
+
+    return 0;
 }
